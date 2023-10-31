@@ -1,4 +1,4 @@
-import 'package:bloc_demo/presentation/bloc/bloc/fetch_users_bloc.dart';
+import 'package:api_call_using_cleanarq_di_bloc/presentation/bloc/bloc/fetch_users_bloc.dart';
 import 'package:flutter/material.dart';
 
 class BodyBuilder extends StatelessWidget {

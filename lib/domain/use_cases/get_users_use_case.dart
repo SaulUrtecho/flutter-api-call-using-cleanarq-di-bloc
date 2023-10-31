@@ -1,7 +1,7 @@
-import 'package:bloc_demo/core/failures.dart';
-import 'package:bloc_demo/core/use_cases.dart';
-import 'package:bloc_demo/domain/entities/user_entity.dart';
-import 'package:bloc_demo/domain/repositories/users_repository_contract.dart';
+import 'package:api_call_using_cleanarq_di_bloc/core/failures.dart';
+import 'package:api_call_using_cleanarq_di_bloc/core/use_cases.dart';
+import 'package:api_call_using_cleanarq_di_bloc/domain/entities/user_entity.dart';
+import 'package:api_call_using_cleanarq_di_bloc/domain/repositories/users_repository_contract.dart';
 import 'package:either_dart/either.dart';
 
 class GetUsersUseCase implements NoInputUseCase<List<UserEntity>> {

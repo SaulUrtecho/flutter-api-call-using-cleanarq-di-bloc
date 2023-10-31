@@ -1,4 +1,4 @@
-import 'package:bloc_demo/core/failures.dart';
+import 'package:api_call_using_cleanarq_di_bloc/core/failures.dart';
 import 'package:either_dart/either.dart';
 
 // These are general use cases

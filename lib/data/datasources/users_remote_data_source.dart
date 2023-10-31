@@ -1,7 +1,7 @@
 import 'dart:convert';
-import 'package:bloc_demo/core/failures.dart';
-import 'package:bloc_demo/data/models/user_model.dart';
-import 'package:bloc_demo/domain/entities/user_entity.dart';
+import 'package:api_call_using_cleanarq_di_bloc/core/failures.dart';
+import 'package:api_call_using_cleanarq_di_bloc/data/models/user_model.dart';
+import 'package:api_call_using_cleanarq_di_bloc/domain/entities/user_entity.dart';
 import 'package:either_dart/either.dart';
 import 'package:http/http.dart';
 

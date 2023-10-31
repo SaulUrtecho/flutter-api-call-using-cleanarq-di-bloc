@@ -1,4 +1,4 @@
-import 'package:bloc_demo/domain/entities/user_entity.dart';
+import 'package:api_call_using_cleanarq_di_bloc/domain/entities/user_entity.dart';
 import 'package:flutter/material.dart';
 
 class UserCard extends StatelessWidget {

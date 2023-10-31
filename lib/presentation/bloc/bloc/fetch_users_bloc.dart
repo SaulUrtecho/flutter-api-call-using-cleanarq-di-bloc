@@ -1,5 +1,5 @@
-import 'package:bloc_demo/domain/entities/user_entity.dart';
-import 'package:bloc_demo/domain/use_cases/get_users_use_case.dart';
+import 'package:api_call_using_cleanarq_di_bloc/domain/entities/user_entity.dart';
+import 'package:api_call_using_cleanarq_di_bloc/domain/use_cases/get_users_use_case.dart';
 import 'package:equatable/equatable.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 

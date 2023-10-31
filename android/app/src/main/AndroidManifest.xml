@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.flutterjunction.bloc_demo">
+    package="com.flutterjunction.api_call_using_cleanarq_di_bloc">
    <application
-        android:label="bloc_demo"
+        android:label="api_call_using_cleanarq_di_bloc"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

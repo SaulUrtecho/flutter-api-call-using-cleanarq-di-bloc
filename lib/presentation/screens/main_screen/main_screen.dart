@@ -1,5 +1,5 @@
-import 'package:bloc_demo/presentation/bloc/bloc/fetch_users_bloc.dart';
-import 'package:bloc_demo/presentation/screens/main_screen/components/main_view.dart';
+import 'package:api_call_using_cleanarq_di_bloc/presentation/bloc/bloc/fetch_users_bloc.dart';
+import 'package:api_call_using_cleanarq_di_bloc/presentation/screens/main_screen/components/main_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get_it/get_it.dart';

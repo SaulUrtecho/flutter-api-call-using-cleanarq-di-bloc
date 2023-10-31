@@ -1,4 +1,4 @@
-import 'package:bloc_demo/data/models/user_model.dart';
+import 'package:api_call_using_cleanarq_di_bloc/data/models/user_model.dart';
 import 'package:equatable/equatable.dart';
 
 class UserEntity extends Equatable {
