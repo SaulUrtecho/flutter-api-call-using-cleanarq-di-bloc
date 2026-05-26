@@ -2,7 +2,7 @@ import 'package:api_call_using_cleanarq_di_bloc/core/failures.dart';
 import 'package:api_call_using_cleanarq_di_bloc/core/use_cases.dart';
 import 'package:api_call_using_cleanarq_di_bloc/domain/entities/user_entity.dart';
 import 'package:api_call_using_cleanarq_di_bloc/domain/repositories/users_repository_contract.dart';
-import 'package:either_dart/either.dart';
+import 'package:dart_either/dart_either.dart';
 
 class GetUsersUseCase implements NoInputUseCase<List<UserEntity>> {
   final UsersRepositoryContract _usersRepositoryContract;

@@ -13,12 +13,16 @@ class FetchUsersBloc extends Bloc<FetchUsersEvent, FetchUsersState> {
     on<LoadUsers>(_loadUsers);
   }
 
-  Future<void> _loadUsers(LoadUsers event, Emitter<FetchUsersState> emit) async {
+  Future<void> _loadUsers(
+    LoadUsers event,
+    Emitter<FetchUsersState> emit,
+  ) async {
     final response = await _getUsersUseCase.run();
-    if (response.isRight) {
-      emit(state.copyWith(appStatus: AppStatus.completed, users: response.right));
-    } else {
-      emit(state.copyWith(appStatus: AppStatus.failure));
-    }
+
+    response.fold(
+      ifLeft: (failure) => emit(state.copyWith(appStatus: AppStatus.failure)),
+      ifRight: (users) =>
+          emit(state.copyWith(appStatus: AppStatus.completed, users: users)),
+    );
   }
 }

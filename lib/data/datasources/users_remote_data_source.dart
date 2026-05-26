@@ -2,7 +2,8 @@ import 'dart:convert';
 import 'package:api_call_using_cleanarq_di_bloc/core/failures.dart';
 import 'package:api_call_using_cleanarq_di_bloc/data/models/user_model.dart';
 import 'package:api_call_using_cleanarq_di_bloc/domain/entities/user_entity.dart';
-import 'package:either_dart/either.dart';
+import 'package:dart_either/dart_either.dart';
+
 import 'package:http/http.dart';
 
 abstract class UsersRemoteDataSource {
@@ -17,11 +18,18 @@ class UsersRemoteDataSourceImpl implements UsersRemoteDataSource {
   @override
   Future<Either<Failure, List<UserEntity>>> getUsers() async {
     try {
-      final response = await client.get(Uri.parse('https://reqres.in/api/users?page=2'));
+      final response = await client.get(
+        Uri.parse('https://reqres.in/api/users?page=2'),
+      );
 
       if (response.statusCode == 200) {
         final List result = jsonDecode(response.body)['data'];
-        return Right(result.map((i) => UserModel.fromJson(i)).map((i) => UserEntity.fromModel(i)).toList());
+        return Right(
+          result
+              .map((i) => UserModel.fromJson(i))
+              .map((i) => UserEntity.fromModel(i))
+              .toList(),
+        );
       } else {
         return Left(ServerFailure());
       }
