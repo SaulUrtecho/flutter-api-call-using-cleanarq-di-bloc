@@ -1,5 +1,5 @@
 import 'package:api_call_using_cleanarq_di_bloc/core/failures.dart';
-import 'package:either_dart/either.dart';
+import 'package:dart_either/dart_either.dart';
 
 // These are general use cases
 

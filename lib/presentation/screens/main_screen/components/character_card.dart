@@ -1,10 +1,10 @@
-import 'package:api_call_using_cleanarq_di_bloc/domain/entities/user_entity.dart';
+import 'package:api_call_using_cleanarq_di_bloc/domain/entities/character_entity.dart';
 import 'package:flutter/material.dart';
 
-class UserCard extends StatelessWidget {
-  final UserEntity user;
+class CharacterCard extends StatelessWidget {
+  final CharacterEntity character;
 
-  const UserCard({super.key, required this.user});
+  const CharacterCard({super.key, required this.character});
 
   @override
   Widget build(BuildContext context) {
@@ -14,15 +14,15 @@ class UserCard extends StatelessWidget {
         color: Theme.of(context).primaryColor,
         child: ListTile(
           title: Text(
-            '${user.firstName}  ${user.lastName}',
+            '${character.name}  ${character.gender}',
             style: const TextStyle(color: Colors.white),
           ),
           subtitle: Text(
-            '${user.email}',
+            '${character.affiliation}',
             style: const TextStyle(color: Colors.white),
           ),
           leading: CircleAvatar(
-            backgroundImage: NetworkImage(user.avatar.toString()),
+            backgroundImage: NetworkImage(character.image ?? ''),
           ),
         ),
       ),

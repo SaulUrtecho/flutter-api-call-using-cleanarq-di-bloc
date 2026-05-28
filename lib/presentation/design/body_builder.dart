@@ -1,4 +1,4 @@
-import 'package:api_call_using_cleanarq_di_bloc/presentation/bloc/bloc/fetch_users_bloc.dart';
+import 'package:api_call_using_cleanarq_di_bloc/presentation/bloc/bloc/fetch_characters_bloc.dart';
 import 'package:flutter/material.dart';
 
 class BodyBuilder extends StatelessWidget {
@@ -19,7 +19,8 @@ class BodyBuilder extends StatelessWidget {
   Widget build(BuildContext context) {
     switch (appStatus) {
       case AppStatus.loading:
-        return onLoading?.call(context) ?? const Center(child: CircularProgressIndicator());
+        return onLoading?.call(context) ??
+            const Center(child: CircularProgressIndicator());
       case AppStatus.failure:
         return onFailure?.call(context) ?? const SizedBox.shrink();
       case AppStatus.completed:

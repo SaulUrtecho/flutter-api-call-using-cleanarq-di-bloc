@@ -1,4 +1,4 @@
-import 'package:api_call_using_cleanarq_di_bloc/presentation/bloc/bloc/fetch_users_bloc.dart';
+import 'package:api_call_using_cleanarq_di_bloc/presentation/bloc/bloc/fetch_characters_bloc.dart';
 import 'package:api_call_using_cleanarq_di_bloc/presentation/screens/main_screen/components/main_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -10,7 +10,8 @@ class MainScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (_) => GetIt.I.get<FetchUsersBloc>()..add(const LoadUsers()),
+      create: (_) =>
+          GetIt.I.get<FetchCharactersBloc>()..add(const LoadCharacters()),
       child: const MainView(),
     );
   }
