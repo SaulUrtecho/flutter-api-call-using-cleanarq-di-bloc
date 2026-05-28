@@ -29,5 +29,3 @@ class FetchCharactersState extends Equatable {
     );
   }
 }
-
-enum AppStatus { loading, completed, failure }

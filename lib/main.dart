@@ -1,5 +1,6 @@
+import 'package:api_call_using_cleanarq_di_bloc/core/app_theme.dart';
 import 'package:api_call_using_cleanarq_di_bloc/di/di.dart';
-import 'package:api_call_using_cleanarq_di_bloc/presentation/blocs/bloc_observer.dart';
+import 'package:api_call_using_cleanarq_di_bloc/presentation/blocs_settings/bloc_observer.dart';
 import 'package:api_call_using_cleanarq_di_bloc/presentation/screens/main_screen/main_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -19,7 +20,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter API Call',
-      theme: ThemeData(primarySwatch: Colors.blue, primaryColor: Colors.orange),
+      theme: appTheme(),
       home: const MainScreen(),
     );
   }
