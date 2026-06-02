@@ -1,16 +1,19 @@
-# api_call_using_cleanarq_di_bloc
+# Dragon Ball Characters App
 
-A new Flutter project.
+This app was created using the Dragon Ball API https://dragonball-api.com/.
+The chosen API was this because it's simple since it give us all the data required with
+just one endpoint.
 
-## Getting Started
+## App behavior
 
-This project is a starting point for a Flutter application.
+When the app starts the first thing that it does is show the characters list.
 
-A few resources to get you started if this is your first Flutter project:
+The characters screen initialize with a loading indicator due a the http request, if it is success will show
+the character list, otherwise a centered error message will be show on the screen. Lastly
+if a list's item is pressed the user will navigate to the characters detail screen.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+<img src="assets/img/character_list.png" width="200" />
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+The details screen show all the character information.
+
+<img src="assets/img/character_details.png" width="200" />
