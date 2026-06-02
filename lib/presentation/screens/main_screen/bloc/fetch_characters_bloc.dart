@@ -1,3 +1,4 @@
+import 'package:api_call_using_cleanarq_di_bloc/core/app_status.dart';
 import 'package:api_call_using_cleanarq_di_bloc/domain/entities/character_entity.dart';
 import 'package:api_call_using_cleanarq_di_bloc/domain/use_cases/get_characters_use_case.dart';
 import 'package:equatable/equatable.dart';
@@ -22,7 +23,7 @@ class FetchCharactersBloc
     final response = await _getCharactersUseCase.run();
 
     response.fold(
-      ifLeft: (failure) => emit(state.copyWith(appStatus: AppStatus.failure)),
+      ifLeft: (_) => emit(state.copyWith(appStatus: AppStatus.failure)),
       ifRight: (characters) => emit(
         state.copyWith(appStatus: AppStatus.completed, characters: characters),
       ),

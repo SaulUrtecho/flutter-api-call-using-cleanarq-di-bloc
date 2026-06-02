@@ -13,4 +13,9 @@ class CharactersRepositoryImpl implements CharactersRepositoryContract {
   Future<Either<Failure, List<CharacterEntity>>> getCharacters() {
     return charactersRemoteDataSource.getCharacters();
   }
+
+  @override
+  Future<Either<Failure, CharacterEntity>> getCharacterDetailsById(int id) {
+    return charactersRemoteDataSource.getCharacterDetailsById(id);
+  }
 }

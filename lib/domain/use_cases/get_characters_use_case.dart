@@ -14,3 +14,14 @@ class GetCharactersUseCase implements NoInputUseCase<List<CharacterEntity>> {
     return await _charactersRepositoryContract.getCharacters();
   }
 }
+
+class GetCharacterByIdUseCase implements InputUseCase<CharacterEntity, int> {
+  final CharactersRepositoryContract _charactersRepositoryContract;
+
+  const GetCharacterByIdUseCase(this._charactersRepositoryContract);
+
+  @override
+  Future<Either<Failure, CharacterEntity>> run(int id) async {
+    return await _charactersRepositoryContract.getCharacterDetailsById(id);
+  }
+}
